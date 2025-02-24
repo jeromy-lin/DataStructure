@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// ©w¸q¥[´îªº¨ç¼Æ
+// å®šç¾©åŠ æ¸›çš„å‡½æ•¸
 int add(int a, int b) {
     return a + b;
 }
@@ -10,17 +10,17 @@ int subtract(int a, int b) {
 }
 
 int main() {
-    int (*operation)(int, int);  // «Å§i¤@­Ó«ü¦V¨â­Ó¾ã¼Æ§@¬°°Ñ¼Æ¨Ãªğ¦^¾ã¼Æªº¨ç¼Æ«ü¼Ğ
-
+    int (*operation)(int, int);  // å®£å‘Šä¸€å€‹æŒ‡å‘å…©å€‹æ•´æ•¸ä½œç‚ºåƒæ•¸ä¸¦è¿”å›æ•´æ•¸çš„å‡½æ•¸æŒ‡æ¨™
+     // æ­¤ç‚ºfunction pointer æ¨™æº–æ’°å¯«æ–¹æ³• è«‹åŒå­¸ç†Ÿè¨˜
     int x = 10, y = 5;
     
-    // ¨Ï¥Î«ü¼Ğ«ü¦V¨ç¼Æ add
+    // ä½¿ç”¨æŒ‡æ¨™æŒ‡å‘å‡½æ•¸ add
     operation = add;
-    printf("The sum of %d and %d is: %d\n", x, y, operation(x, y));  // ©I¥s add ¨ç¼Æ
+    printf("The sum of %d and %d is: %d\n", x, y, operation(x, y));  // å‘¼å« add å‡½æ•¸
 
-    // ¨Ï¥Î«ü¼Ğ«ü¦V¨ç¼Æ subtract
+    // ä½¿ç”¨æŒ‡æ¨™æŒ‡å‘å‡½æ•¸ subtract
     operation = subtract;
-    printf("The difference of %d and %d is: %d\n", x, y, operation(x, y));  // ©I¥s subtract ¨ç¼Æ
+    printf("The difference of %d and %d is: %d\n", x, y, operation(x, y));  // å‘¼å« subtract å‡½æ•¸
 
     return 0;
 }
